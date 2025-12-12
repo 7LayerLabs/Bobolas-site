@@ -102,6 +102,7 @@
   
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hiring-modern.css" />
 </head>
 
 <body>
@@ -154,75 +155,113 @@
       </div>
     </header>
     <main class="page">
-      <section class="hiring">
-        <div class="hiring__container">
-          <h1 class="hiring__title">Join Our Team</h1>
-          <div class="hiring__intro">
-            <p class="hiring__description">We are always looking for the right person to join our team! Please fill out the form if you are interested and we will reply as quickly as possible.</p>
-            <p class="hiring__description">At Bobola's Restaurant, we value dedication, enthusiasm, and a passion for great food and service. Whether you're an experienced professional or just starting your career in the restaurant industry, we'd love to hear from you.</p>
-          </div>
-          
-          <form class="hiring__form" id="hiringForm">
-            <!-- First Row: Personal Info and Work Experience -->
-            <div class="form__grid">
-              <!-- Left Column -->
-              <div class="form__column">
-                <div class="form__section">
-                  <h3>Personal Information</h3>
-                  <div class="form__group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                  </div>
+      <!-- Modern Hero Section -->
+      <section class="hiring-hero">
+        <div class="hiring-hero-content">
+          <h1>Join Our Team</h1>
+          <p>We are always looking for the right person to join our team! Please fill out the form if you are interested and we will reply as quickly as possible.</p>
+          <p>At Bobola's Restaurant, we value dedication, enthusiasm, and a passion for great food and service. Whether you're an experienced professional or just starting your career in the restaurant industry, we'd love to hear from you.</p>
+        </div>
+      </section>
 
-                  <div class="form__group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                  </div>
+      <!-- Modern Form Section -->
+      <div class="hiring-form-container">
+        <form id="hiringForm">
 
-                  <div class="form__group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required>
-                  </div>
-                </div>
+          <!-- Personal Information Card -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <div class="form-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
               </div>
+              <h2 class="form-card-title">Personal Information</h2>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+          </div>
 
-              <!-- Right Column -->
-              <div class="form__column">
-                <div class="form__section">
-                  <h3>Work Experience</h3>
-                  <div class="form__group">
-                    <label for="workExperience" class="work-experience-label">Please describe your relevant work experience</label>
-                    <textarea id="workExperience" name="workExperience" class="work-experience-textarea" rows="10" placeholder="Include previous positions, responsibilities, and duration of employment"></textarea>
-                  </div>
-                </div>
+          <!-- Work Experience Card -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <div class="form-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <h2 class="form-card-title">Work Experience</h2>
+            </div>
+            <div class="input-group">
+              <label for="workExperience">Please describe your relevant work experience</label>
+              <textarea id="workExperience" name="workExperience" placeholder="Include previous positions, responsibilities, and duration of employment"></textarea>
+            </div>
+          </div>
+
+          <!-- Position & Employment Card -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <div class="form-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <h2 class="form-card-title">Position & Preferences</h2>
+            </div>
+
+            <div class="input-group">
+              <label>Position(s) Applying For</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="position" value="Cook">
+                  <span>Cook</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="position" value="Server">
+                  <span>Server</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="position" value="Server-Bartender">
+                  <span>Server (Bartending)</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="position" value="Dishwasher">
+                  <span>Dishwasher</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="position" value="Busser">
+                  <span>Busser</span>
+                </label>
               </div>
             </div>
 
-            <!-- Work Preferences Section -->
-            <div class="form__section preferences-section">
-              <h3>Work Preferences</h3>
-              <div class="form__group">
-                <label>Position(s) Applying For</label>
-                <div class="checkbox-group">
-                  <label><input type="checkbox" name="position" value="Cook"> Cook</label>
-                  <label><input type="checkbox" name="position" value="Server"> Server</label>
-                  <label><input type="checkbox" name="position" value="Server-Bartender"> Server (with bartending experience)</label>
-                  <label><input type="checkbox" name="position" value="Dishwasher"> Dishwasher</label>
-                  <label><input type="checkbox" name="position" value="Busser"> Busser</label>
-                </div>
+            <div class="input-group">
+              <label>Employment Type</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="employment" value="Full-Time">
+                  <span>Full-Time</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="employment" value="Part-Time">
+                  <span>Part-Time</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="employment" value="Temporary">
+                  <span>Temporary</span>
+                </label>
               </div>
+            </div>
 
-              <div class="form__group">
-                <label>Employment Desired</label>
-                <div class="checkbox-group">
-                  <label><input type="checkbox" name="employment" value="Full-Time"> Full-Time</label>
-                  <label><input type="checkbox" name="employment" value="Part-Time"> Part-Time</label>
-                  <label><input type="checkbox" name="employment" value="Temporary"> Temporary</label>
-                </div>
-              </div>
-
-              <div class="form__group">
-                <label for="daysPerWeek">Desired Days Per Week</label>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="daysPerWeek">Desired Days Per Week *</label>
                 <select id="daysPerWeek" name="daysPerWeek" required>
                   <option value="">Please select</option>
                   <option value="1-2">1-2 days</option>
@@ -231,9 +270,8 @@
                   <option value="5+">5+ days</option>
                 </select>
               </div>
-
-              <div class="form__group">
-                <label for="hoursPerWeek">Desired Hours Per Week</label>
+              <div class="input-group">
+                <label for="hoursPerWeek">Desired Hours Per Week *</label>
                 <select id="hoursPerWeek" name="hoursPerWeek" required>
                   <option value="">Please select</option>
                   <option value="10-15">10-15 hours</option>
@@ -243,85 +281,102 @@
                 </select>
               </div>
             </div>
+          </div>
 
-            <!-- Availability Section -->
-            <div class="form__section">
-              <h3>Availability *</h3>
-              <div class="availability-table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Day</th>
-                      <th>AM<br/>(7am-11am)</th>
-                      <th>PM<br/>(11am-4pm)</th>
-                      <th>EVE<br/>(4pm-9:30pm)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Mon</td>
-                      <td><input type="checkbox" name="monday_morning"></td>
-                      <td><input type="checkbox" name="monday_afternoon"></td>
-                      <td><input type="checkbox" name="monday_evening"></td>
-                    </tr>
-                    <tr>
-                      <td>Tue</td>
-                      <td><input type="checkbox" name="tuesday_morning"></td>
-                      <td><input type="checkbox" name="tuesday_afternoon"></td>
-                      <td><input type="checkbox" name="tuesday_evening"></td>
-                    </tr>
-                    <tr>
-                      <td>Wed</td>
-                      <td><input type="checkbox" name="wednesday_morning"></td>
-                      <td><input type="checkbox" name="wednesday_afternoon"></td>
-                      <td><input type="checkbox" name="wednesday_evening"></td>
-                    </tr>
-                    <tr>
-                      <td>Thu</td>
-                      <td><input type="checkbox" name="thursday_morning"></td>
-                      <td><input type="checkbox" name="thursday_afternoon"></td>
-                      <td><input type="checkbox" name="thursday_evening"></td>
-                    </tr>
-                    <tr>
-                      <td>Fri</td>
-                      <td><input type="checkbox" name="friday_morning"></td>
-                      <td><input type="checkbox" name="friday_afternoon"></td>
-                      <td><input type="checkbox" name="friday_evening"></td>
-                    </tr>
-                    <tr>
-                      <td>Sat</td>
-                      <td><input type="checkbox" name="saturday_morning"></td>
-                      <td><input type="checkbox" name="saturday_afternoon"></td>
-                      <td><input type="checkbox" name="saturday_evening"></td>
-                    </tr>
-                    <tr>
-                      <td>Sun</td>
-                      <td><input type="checkbox" name="sunday_morning"></td>
-                      <td><input type="checkbox" name="sunday_afternoon"></td>
-                      <td><input type="checkbox" name="sunday_evening"></td>
-                    </tr>
-                  </tbody>
-                </table>
+          <!-- Availability Card -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <div class="form-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
               </div>
-              <p class="availability-note">* - denotes these hours are estimates and could change or be altered.</p>
+              <h2 class="form-card-title">Availability</h2>
             </div>
 
-            <!-- Additional Information Section -->
-            <div class="form__section additional-info">
-              <h3>Additional Information</h3>
-              <div class="form__group">
-                <label for="additionalInfo">Is there anything else you'd like us to know? (Special skills, certifications, etc.)</label>
-                <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
-              </div>
+            <div class="availability-grid">
+              <table class="availability-table">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Morning<small>7am - 11am</small></th>
+                    <th>Afternoon<small>11am - 4pm</small></th>
+                    <th>Evening<small>4pm - 9:30pm</small></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monday</td>
+                    <td><input type="checkbox" name="monday_morning"></td>
+                    <td><input type="checkbox" name="monday_afternoon"></td>
+                    <td><input type="checkbox" name="monday_evening"></td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td><input type="checkbox" name="tuesday_morning"></td>
+                    <td><input type="checkbox" name="tuesday_afternoon"></td>
+                    <td><input type="checkbox" name="tuesday_evening"></td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td><input type="checkbox" name="wednesday_morning"></td>
+                    <td><input type="checkbox" name="wednesday_afternoon"></td>
+                    <td><input type="checkbox" name="wednesday_evening"></td>
+                  </tr>
+                  <tr>
+                    <td>Thursday</td>
+                    <td><input type="checkbox" name="thursday_morning"></td>
+                    <td><input type="checkbox" name="thursday_afternoon"></td>
+                    <td><input type="checkbox" name="thursday_evening"></td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td>
+                    <td><input type="checkbox" name="friday_morning"></td>
+                    <td><input type="checkbox" name="friday_afternoon"></td>
+                    <td><input type="checkbox" name="friday_evening"></td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td><input type="checkbox" name="saturday_morning"></td>
+                    <td><input type="checkbox" name="saturday_afternoon"></td>
+                    <td><input type="checkbox" name="saturday_evening"></td>
+                  </tr>
+                  <tr>
+                    <td>Sunday</td>
+                    <td><input type="checkbox" name="sunday_morning"></td>
+                    <td><input type="checkbox" name="sunday_afternoon"></td>
+                    <td><input type="checkbox" name="sunday_evening"></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            
-            <button type="submit" class="form__submit" id="submitButton">Submit Application</button>
-            <div id="formMessage" style="display: none; text-align: center; margin-top: 1rem; padding: 1rem; border-radius: 4px;"></div>
-            
-            <p class="form__disclaimer">By submitting this application, I certify that all information provided is accurate and complete to the best of my knowledge.</p>
-          </form>
-        </div>
-      </section>
+            <p class="availability-note">* Hours shown are estimates and may vary based on business needs.</p>
+          </div>
+
+          <!-- Additional Info Card -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <div class="form-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              </div>
+              <h2 class="form-card-title">Additional Information</h2>
+            </div>
+            <div class="input-group">
+              <label for="additionalInfo">Is there anything else you'd like us to know?</label>
+              <textarea id="additionalInfo" name="additionalInfo" placeholder="Special skills, certifications, references, or anything else you'd like to share..."></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Section -->
+          <div class="submit-section">
+            <button type="submit" class="submit-btn" id="submitButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Submit Application
+            </button>
+            <div id="formMessage" style="display: none; text-align: center; margin-top: 1rem; padding: 1rem;"></div>
+            <p class="form-disclaimer">By submitting this application, I certify that all information provided is accurate and complete to the best of my knowledge.</p>
+          </div>
+
+        </form>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__container">

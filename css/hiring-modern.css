@@ -1,0 +1,351 @@
+/* Modern Hiring Page Styles */
+
+/* Hero Section */
+.hiring-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hiring-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/Home/inside.jpg') center/cover;
+  opacity: 0.15;
+}
+
+.hiring-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hiring-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.hiring-hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* Form Container */
+.hiring-form-container {
+  max-width: 900px;
+  margin: -60px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Modern Form Card */
+.form-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  padding: 40px;
+  margin-bottom: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+}
+
+.form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.form-card-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #a30010 0%, #d4001a 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.form-card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+/* Modern Input Styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #a30010;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(163, 0, 16, 0.1);
+}
+
+.input-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.input-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+  padding-right: 44px;
+}
+
+/* Two Column Layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modern Checkbox/Radio Styling */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-item:hover {
+  border-color: #cbd5e0;
+  background: #fff;
+}
+
+.checkbox-item input {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  accent-color: #a30010;
+  cursor: pointer;
+}
+
+.checkbox-item span {
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+
+.checkbox-item:has(input:checked) {
+  border-color: #a30010;
+  background: rgba(163, 0, 16, 0.05);
+}
+
+/* Modern Availability Table */
+.availability-grid {
+  overflow-x: auto;
+  margin-top: 8px;
+}
+
+.availability-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+}
+
+.availability-table th {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 14px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.availability-table th small {
+  display: block;
+  font-weight: 400;
+  opacity: 0.8;
+  font-size: 0.75rem;
+  margin-top: 2px;
+  text-transform: none;
+}
+
+.availability-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.availability-table tr:last-child td {
+  border-bottom: none;
+}
+
+.availability-table td:first-child {
+  font-weight: 600;
+  color: #1a1a2e;
+  background: #f8fafc;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.availability-table input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: #a30010;
+  cursor: pointer;
+}
+
+.availability-table tr:hover td {
+  background: #fafafa;
+}
+
+.availability-table tr:hover td:first-child {
+  background: #f0f0f0;
+}
+
+.availability-note {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Submit Button */
+.submit-section {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 48px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #a30010 0%, #d4001a 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(163, 0, 16, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(163, 0, 16, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-disclaimer {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Message Styling */
+#formMessage {
+  border-radius: 12px !important;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hiring-hero {
+    padding: 60px 20px;
+  }
+
+  .hiring-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .form-card {
+    padding: 24px;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
