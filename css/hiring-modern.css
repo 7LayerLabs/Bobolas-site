@@ -207,12 +207,13 @@
   justify-content: center;
   gap: 16px;
   margin-top: 8px;
+  max-width: 528px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .position-card {
-  flex: 0 0 calc(33.333% - 12px);
-  max-width: 180px;
-  min-width: 140px;
+  width: 160px;
   position: relative;
   background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
   border: 2px solid #e2e8f0;
