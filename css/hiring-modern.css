@@ -98,6 +98,10 @@
   margin-bottom: 24px;
 }
 
+.section-header.centered {
+  text-align: center;
+}
+
 .section-header h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -198,13 +202,17 @@
    POSITION CARDS - Interactive Selection
    ============================================ */
 .position-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   margin-top: 8px;
 }
 
 .position-card {
+  flex: 0 0 calc(33.333% - 12px);
+  max-width: 180px;
+  min-width: 140px;
   position: relative;
   background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
   border: 2px solid #e2e8f0;
@@ -302,6 +310,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 8px;
 }
 
