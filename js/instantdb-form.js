@@ -29,7 +29,7 @@ function showSuccess(form, formMessage) {
     </div>
     <h2 style="color: #155724; margin-bottom: 12px;">Application Submitted!</h2>
     <p style="margin-bottom: 20px;">Thank you for your interest in joining the Bobola's team. We'll review your application and contact you soon.</p>
-    <a href="index" style="display: inline-block; padding: 12px 24px; background: #155724; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600;">Return to Homepage</a>
+    <a href="index.html" style="display: inline-block; padding: 12px 24px; background: #155724; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600;">Return to Homepage</a>
   `;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
