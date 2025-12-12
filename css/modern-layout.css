@@ -323,7 +323,7 @@
    ============================================ */
 .footer-modern {
   background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-bg-mid) 50%, var(--dark-bg-light) 100%);
-  padding: 80px 20px 40px;
+  padding: 40px 20px 24px;
   position: relative;
   overflow: hidden;
 }
@@ -346,27 +346,27 @@
 .footer-modern__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 48px;
-  margin-bottom: 60px;
+  gap: 32px;
+  margin-bottom: 24px;
 }
 
 /* Footer Brand */
 .footer-modern__brand {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .footer-modern__logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   text-decoration: none;
 }
 
 .footer-modern__logo img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
   object-fit: cover;
 }
@@ -377,14 +377,14 @@
 }
 
 .footer-modern__logo-primary {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--white);
   letter-spacing: 1px;
 }
 
 .footer-modern__logo-secondary {
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   color: rgba(255,255,255,0.5);
   font-weight: 500;
   letter-spacing: 2px;
@@ -392,24 +392,23 @@
 }
 
 .footer-modern__tagline {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
-  line-height: 1.7;
-  max-width: 300px;
+  line-height: 1.6;
+  max-width: 280px;
 }
 
 .footer-modern__social {
   display: flex;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 8px;
 }
 
 .footer-modern__social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   background: rgba(255,255,255,0.1);
   color: var(--white);
   border-radius: var(--radius-sm);
@@ -418,24 +417,24 @@
 
 .footer-modern__social-link:hover {
   background: var(--primary-red);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .footer-modern__social-link svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 /* Footer Columns */
 .footer-modern__column h4 {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .footer-modern__column h4::after {
@@ -443,7 +442,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30px;
+  width: 24px;
   height: 2px;
   background: var(--primary-red);
 }
@@ -454,69 +453,69 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .footer-modern__links a {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
   text-decoration: none;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .footer-modern__links a:hover {
   color: var(--white);
-  transform: translateX(5px);
+  transform: translateX(3px);
 }
 
 /* Footer Contact */
 .footer-modern__contact {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .footer-modern__contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 10px;
 }
 
 .footer-modern__contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   background: rgba(255,255,255,0.1);
   border-radius: var(--radius-sm);
   flex-shrink: 0;
 }
 
 .footer-modern__contact-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   stroke: var(--primary-red);
 }
 
 .footer-modern__contact-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .footer-modern__contact-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: rgba(255,255,255,0.5);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .footer-modern__contact-value {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--white);
   font-weight: 500;
 }
@@ -533,7 +532,7 @@
 
 /* Footer Bottom */
 .footer-modern__bottom {
-  padding-top: 40px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255,255,255,0.1);
   display: flex;
   justify-content: space-between;
@@ -541,13 +540,13 @@
 }
 
 .footer-modern__copyright {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: rgba(255,255,255,0.5);
 }
 
 .footer-modern__bottom-links {
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-modern__bottom-links a {
