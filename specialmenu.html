@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <title>Specials Menu - Bobola's Restaurant</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .specials-menu {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .specials-title {
+      color: #a30010;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      color: #a30010;
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      font-weight: 600;
+    }
+
+    .menu-item {
+      margin-bottom: 2rem;
+    }
+
+    .menu-item__title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-item__description {
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .tossed-fingers-section {
+      margin: 1rem 0 2rem;
+      padding: 1rem;
+      background-color: #f8f8f8;
+      border: 2px solid #a30010;
+      border-radius: 4px;
+    }
+
+    .tossed-fingers-title {
+      color: #a30010;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .flavor-week {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <!-- Same header as other menu pages -->
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">
+          <img src="images/Home/logo.jpg" alt="Bobola's Restaurant Logo">
+          <div class="logo__text">
+            <span class="logo__primary">BOBOLA'S</span>
+            <span class="logo__secondary">Restaurant</span>
+          </div>
+        </a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="index" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="about" class="menu__link">About</a></li>
+                <li class="menu__item menu__item-dropdown">
+                  <a href="#" class="menu__link active">Menus <span class="dropdown-arrow">▼</span></a>
+                  <ul class="dropdown__list">
+                    <li><a href="bkmenu" class="dropdown__link">Breakfast</a></li>
+                    <li><a href="lunchmenu" class="dropdown__link">Lunch</a></li>
+                    <li><a href="dinmenu" class="dropdown__link">Dinner</a></li>
+                    <li><a href="specialmenu" class="dropdown__link">Daily Specials</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a href="hiring" class="menu__link">Hiring</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <a href="tel:6035771086" class="actions-header__phone">(603) 577-1086</a>
+            <a href="https://order.toasttab.com/online/bobolas" class="actions-header__button" target="_blank">
+              <span class="button__main">ONLINE ORDERING</span>
+              <span class="button__sub">Order Now!</span>
+            </a>
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="specials-menu">
+        <h1 class="specials-title">DINNER SPECIALS</h1>
+
+        <h2 class="section-title">APPETIZERS</h2>
+        
+        <div class="menu-item">
+          <h3 class="menu-item__title">STUFFED MUSHROOMS WITH CRABMEAT STUFFING</h3>
+          <p class="menu-item__description">Button mushrooms filled with a blend of our house-made cracker stuffing and crabmeat stuffing</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">FRIED BROCCOLI</h3>
+          <p class="menu-item__description">Crispy, golden fried broccoli florets served with your choice of ranch dressing or our house-made cheese sauce.</p>
+        </div>
+
+        <div class="tossed-fingers-section">
+          <h3 class="tossed-fingers-title">TOSSED FINGERS</h3>
+          <div class="flavor-week">
+            FLAVOR OF THE WEEK: HICKORY AND BROWN SUGAR
+          </div>
+        </div>
+
+        <h2 class="section-title">ENTREES</h2>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">GARLIC BUTTER HADDOCK WITH SEAFOOD STUFFING</h3>
+          <p class="menu-item__description">Atlantic haddock baked in garlic butter, topped with our house-made seafood stuffing and seasoned crumbs</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">STUFFED CHICKEN BREAST</h3>
+          <p class="menu-item__description">Tender chicken breast filled with house-made stuffing, topped with rich chicken gravy</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">CHICKEN STIR FRY OVER RICE</h3>
+          <p class="menu-item__description">Lightly fried chicken tossed in savory teriyaki sauce with mushrooms, peppers, onions, broccoli, and snow peas. Served over a bed of steamed rice</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">MAPLE BACON GLAZED PORK CHOP</h3>
+          <p class="menu-item__description">Center-cut pork chop grilled to perfection and finished with a sweet maple bacon glaze</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">LAZY MAN LASAGNA</h3>
+          <p class="menu-item__description">Choice of pasta tossed with ricotta cheese, tomato sauce, ground beef, and sweet Italian sausage, then topped with melted mozzarella and baked</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">GRILLED SWORDFISH</h3>
+          <p class="menu-item__description">Thick-cut swordfish steak oven-cooked and finished with lemon butter</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">BEER BATTERED HADDOCK</h3>
+          <p class="menu-item__description">Fresh Atlantic haddock dipped in our house-made beer batter and fried to a golden crisp</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">CHEESEBURGER MAC N CHEESE</h3>
+          <p class="menu-item__description">Cavatappi pasta tossed with ground beef and our house-made creamy cheese sauce, topped with cheddar cheese and light buttery crumbs</p>
+        </div>
+
+        <div class="menu-item">
+          <h3 class="menu-item__title">SWEET CHILI FRIED SHRIMP</h3>
+          <p class="menu-item__description">Crispy golden shrimp tossed in a sweet and tangy chili glaze, with just the right kick</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <!-- Same footer as other menu pages -->
+      <div class="footer__container">
+        <div class="footer__logo">
+          <img src="images/Home/logo.jpg" alt="Bobola's Restaurant Logo">
+          <span>Bobola's Restaurant</span>
+        </div>
+        <div class="footer__address">
+          <span>9 Simon Street</span>
+          <span>Nashua, NH</span>
+          <span>03060</span>
+        </div>
+        <div class="footer__copyright">
+          <p>Copyright © 2024 Bobola's Restaurant • All Rights Reserved</p>
+          <a href="employee.html" style="color: #a30010; font-weight: 400; text-decoration: none; font-size: 1rem; display: inline-block; margin-top: 0.5rem;">Employee Portal →</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html> 
