@@ -69,6 +69,20 @@ function initForm() {
         sunday: { morning: !!formData.get('sunday_morning'), afternoon: !!formData.get('sunday_afternoon'), evening: !!formData.get('sunday_evening') }
       };
 
+      // Prepare application data
+      const applicationData = {
+        fullName: formData.get('fullName'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        workExperience: formData.get('workExperience') || '',
+        positions: positions,
+        employment: employment,
+        daysPerWeek: formData.get('daysPerWeek'),
+        hoursPerWeek: formData.get('hoursPerWeek'),
+        availability: availability,
+        additionalInfo: formData.get('additionalInfo') || ''
+      };
+
       // Try to save to InstantDB
       try {
         const ipAddress = await getIPInfo();
@@ -78,16 +92,8 @@ function initForm() {
         const applicationId = id();
         await db.transact(
           tx.applications[applicationId].update({
-            fullName: formData.get('fullName'),
-            email: formData.get('email'),
-            phone: formData.get('phone'),
-            workExperience: formData.get('workExperience') || '',
-            positions: positions,
-            employment: employment,
-            daysPerWeek: formData.get('daysPerWeek'),
-            hoursPerWeek: formData.get('hoursPerWeek'),
+            ...applicationData,
             availability: JSON.stringify(availability),
-            additionalInfo: formData.get('additionalInfo') || '',
             ipAddress: ipAddress,
             userAgent: navigator.userAgent,
             referrer: document.referrer || 'direct',
@@ -98,7 +104,22 @@ function initForm() {
         console.log('Application saved to InstantDB');
       } catch (dbError) {
         console.error('InstantDB error (still showing success):', dbError);
-        // Continue to show success even if DB fails - we don't want to lose the applicant
+      }
+
+      // Send email notification
+      try {
+        const emailResponse = await fetch('/api/send-application', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(applicationData)
+        });
+        if (emailResponse.ok) {
+          console.log('Email notification sent');
+        } else {
+          console.error('Email send failed:', await emailResponse.text());
+        }
+      } catch (emailError) {
+        console.error('Email error (still showing success):', emailError);
       }
 
       // Always show success to the user
