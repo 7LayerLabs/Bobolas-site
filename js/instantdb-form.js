@@ -69,24 +69,40 @@ async function initInstantDB() {
         })
       );
 
-      // Success
+      // Success - hide form and show success message
+      form.style.display = 'none';
       formMessage.style.display = 'block';
       formMessage.style.backgroundColor = '#d4edda';
       formMessage.style.color = '#155724';
       formMessage.style.border = '1px solid #c3e6cb';
-      formMessage.innerHTML = 'Thank you for your application! We will review it and contact you soon.';
-      form.reset();
+      formMessage.style.padding = '40px';
+      formMessage.style.borderRadius = '16px';
+      formMessage.style.fontSize = '1.1rem';
+      formMessage.style.textAlign = 'center';
+      formMessage.innerHTML = `
+        <div style="margin-bottom: 16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#155724" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h2 style="color: #155724; margin-bottom: 12px;">Application Submitted!</h2>
+        <p style="margin-bottom: 20px;">Thank you for your interest in joining the Bobola's team. We'll review your application and contact you soon.</p>
+        <a href="index" style="display: inline-block; padding: 12px 24px; background: #155724; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600;">Return to Homepage</a>
+      `;
+      // Scroll to top so user sees the message
+      window.scrollTo({ top: 0, behavior: 'smooth' });
 
     } catch (error) {
+      // Show error but keep form visible
       formMessage.style.display = 'block';
       formMessage.style.backgroundColor = '#f8d7da';
       formMessage.style.color = '#721c24';
       formMessage.style.border = '1px solid #f5c6cb';
+      formMessage.style.padding = '20px';
+      formMessage.style.borderRadius = '12px';
+      formMessage.style.marginTop = '20px';
       formMessage.innerHTML = 'There was a problem submitting your application. Please try again or contact us at (603) 577-1086.';
       console.error('Form submission error:', error);
-    } finally {
       submitButton.disabled = false;
-      submitButton.textContent = 'Submit Application';
+      submitButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> Submit Application`;
     }
   });
 }
