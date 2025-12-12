@@ -2,3 +2,5 @@
 *.code-workspace
 .htaccess*
 .well-known.zip
+
+.vercel
