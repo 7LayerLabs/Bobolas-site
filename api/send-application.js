@@ -109,7 +109,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Bobola\'s Jobs <onboarding@resend.dev>',
+        from: 'Bobola\'s Jobs <jobs@bobolasnashua.com>',
         to: ['derek.bobola@gmail.com'],
         subject: `New Job Application: ${data.fullName} - ${Array.isArray(data.positions) ? data.positions.join(', ') : 'General'}`,
         html: emailHtml,
