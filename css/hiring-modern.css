@@ -408,6 +408,10 @@
   letter-spacing: 0.5px;
 }
 
+.availability-header-cell .abbr {
+  display: none;
+}
+
 .availability-header-cell small {
   display: block;
   font-weight: 400;
@@ -591,12 +595,20 @@
   }
 
   .availability-header-cell {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0;
   }
 
+  .availability-header-cell .full {
+    display: none;
+  }
+
+  .availability-header-cell .abbr {
+    display: inline;
+  }
+
   .availability-header-cell small {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
   }
 
   .availability-toggle {
@@ -655,10 +667,10 @@
   }
 
   .availability-header-cell {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 
   .availability-header-cell small {
-    font-size: 0.55rem;
+    font-size: 0.5rem;
   }
 }
