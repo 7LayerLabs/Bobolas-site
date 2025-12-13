@@ -96,7 +96,8 @@ export default async function handler(req, res) {
 
         <div style="background: #333; color: #999; padding: 15px; text-align: center; font-size: 12px;">
           <p style="margin: 0;">Submitted: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })}</p>
-          <p style="margin: 5px 0 0;">This application was submitted through bobolasrestaurant.com</p>
+          <p style="margin: 5px 0 0;">IP Address: ${data.ipAddress || 'Unknown'}</p>
+          <p style="margin: 5px 0 0;">This application was submitted through bobolasnashua.com</p>
         </div>
       </div>
     `;
