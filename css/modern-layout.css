@@ -426,7 +426,7 @@
 }
 
 /* Footer Columns */
-.footer-modern__column h4 {
+.footer-modern__column h3 {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--white);
@@ -437,7 +437,7 @@
   padding-bottom: 8px;
 }
 
-.footer-modern__column h4::after {
+.footer-modern__column h3::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -633,7 +633,7 @@
     justify-content: center;
   }
 
-  .footer-modern__column h4::after {
+  .footer-modern__column h3::after {
     left: 50%;
     transform: translateX(-50%);
   }
@@ -806,4 +806,39 @@ textarea:focus-visible,
 
 .skip-link:focus {
   top: 0;
+}
+
+/* ============================================
+   TOUCH TARGET SIZES - Mobile Accessibility
+   ============================================ */
+@media (max-width: 1024px) {
+  /* Ensure minimum 48x48px touch targets for mobile navigation */
+  .mobile-nav-overlay__link,
+  .mobile-nav-overlay__submenu a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-modern__mobile-toggle {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .header-modern__social,
+  .header-modern__cta {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .footer-modern__links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-modern__social-link {
+    min-width: 44px;
+    min-height: 44px;
+  }
 }
