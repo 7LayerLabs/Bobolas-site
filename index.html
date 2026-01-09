@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6Z42CN8BR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-H6Z42CN8BR');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=yes" />
@@ -109,6 +100,12 @@
   </script>
 
   <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Preload critical assets for performance -->
+  <link rel="preload" href="images/Home/frenchonion.jpg" as="image" />
+  <link rel="preload" href="css/modern-layout.css" as="style" />
+  <link rel="preload" href="css/home-modern.css" as="style" />
+
   <link rel="stylesheet" href="css/modern-layout.css" />
   <link rel="stylesheet" href="css/home-modern.css" />
 </head>
@@ -118,7 +115,7 @@
   <header class="header-modern">
     <div class="header-modern__container">
       <a href="index.html" class="header-modern__logo">
-        <img src="images/Home/logo.jpg" alt="Bobola's Restaurant Logo">
+        <img src="images/Home/logo.jpg" alt="Bobola's Restaurant Logo" width="52" height="59">
         <div class="header-modern__logo-text">
           <span class="header-modern__logo-primary">BOBOLA'S</span>
           <span class="header-modern__logo-secondary">Restaurant</span>
@@ -218,7 +215,7 @@
           </div>
         </div>
         <div class="home-hero__image">
-          <img src="images/Home/frenchonion.jpg" alt="French Onion Soup at Bobola's Restaurant" class="home-hero__image-main">
+          <img src="images/Home/frenchonion.jpg" alt="French Onion Soup at Bobola's Restaurant" class="home-hero__image-main" width="680" height="510" fetchpriority="high">
           <div class="home-hero__floating-card home-hero__floating-card--rating">
             <div class="home-hero__floating-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -288,7 +285,7 @@
     <section class="home-about">
       <div class="home-about__container">
         <div class="home-about__image">
-          <img src="images/Home/bakedhaddock.jpg" alt="Baked Haddock at Bobola's Restaurant" loading="lazy">
+          <img src="images/Home/bakedhaddock.jpg" alt="Baked Haddock at Bobola's Restaurant" loading="lazy" width="716" height="895">
         </div>
         <div class="home-about__content">
           <div class="home-about__badge">Our Story</div>
@@ -442,7 +439,7 @@
       <div class="home-location__container">
         <div class="home-location__grid">
           <div class="home-location__image">
-            <img src="images/Home/frontbuilding.jpg" alt="Bobola's Restaurant Exterior" loading="lazy">
+            <img src="images/Home/frontbuilding.jpg" alt="Bobola's Restaurant Exterior" loading="lazy" width="680" height="322">
             <div class="home-location__image-overlay">
               <span>Come Visit Us!</span>
             </div>
@@ -621,6 +618,25 @@
     } else { // Tue-Fri
       todayHoursEl.textContent = '8:00am - 8:00pm';
     }
+  </script>
+
+  <!-- Google Analytics - Deferred for performance -->
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-H6Z42CN8BR';
+        script.async = true;
+        document.head.appendChild(script);
+
+        script.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-H6Z42CN8BR');
+        };
+      }, 100);
+    });
   </script>
 </body>
 </html>
