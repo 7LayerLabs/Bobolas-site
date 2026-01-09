@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6Z42CN8BR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H6Z42CN8BR');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -61,7 +70,13 @@
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
         "opens": "07:30",
         "closes": "20:00"
       },
@@ -69,7 +84,7 @@
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Sunday",
         "opens": "07:30",
-        "closes": "14:00"
+        "closes": "14:30"
       }
     ],
     "servesCuisine": ["American", "Italian", "Seafood", "Breakfast", "Comfort Food"],
@@ -242,7 +257,7 @@
               <div class="news-page__contact">
                 <p><strong>Phone:</strong> <a href="tel:6035771086">(603) 577-1086</a></p>
                 <p><strong>Address:</strong> 9 Simon Street, Nashua, NH 03060</p>
-                <p><strong>Hours:</strong> Tue-Sat 7:30am-8pm, Sun 7:30am-2pm</p>
+                <p><strong>Hours:</strong> Tue-Fri 8am-8pm, Sat 7:30am-8pm, Sun 7:30am-2:30pm</p>
               </div>
             </div>
           </div>
