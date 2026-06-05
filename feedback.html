@@ -11,7 +11,7 @@
 <link rel="icon" href="/images/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --red:#e72027;        /* chef's neckerchief */
@@ -26,7 +26,8 @@
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{margin:0;padding:0}
   body{
-    font-family:"Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
     background:var(--cream);
     background-image:radial-gradient(circle at 50% -10%, #fff 0%, var(--cream) 60%);
     color:var(--charcoal);min-height:100vh;
@@ -40,10 +41,10 @@
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   .logo{width:148px;height:auto;margin:0 auto 2px;display:block;filter:drop-shadow(0 4px 8px rgba(0,0,0,.12))}
   .logo.sm{width:104px}
-  .brand{font-family:"Baloo 2",sans-serif;font-weight:800;letter-spacing:.3px;color:var(--red);font-size:34px;line-height:1;margin:0 0 2px}
+  .brand{font-family:"Fraunces",Georgia,serif;font-weight:900;letter-spacing:-.5px;color:var(--red);font-size:38px;line-height:1;margin:0 0 2px}
   .brand .apos{color:var(--gold)}
-  .sub{color:var(--gray);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin:0 0 18px}
-  h1{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:25px;line-height:1.2;margin:6px 0 4px;color:var(--charcoal)}
+  .sub{color:var(--gray);font-size:11px;letter-spacing:3.5px;text-transform:uppercase;font-weight:600;margin:0 0 18px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:26px;line-height:1.18;margin:6px 0 4px;color:var(--charcoal);letter-spacing:-.2px}
   p.lead{color:var(--gray);font-size:15.5px;line-height:1.5;margin:0 0 20px}
   .stars{display:flex;justify-content:center;gap:6px;margin:8px 0 4px}
   .star{width:48px;height:48px;cursor:pointer;color:#e3dac9;transition:transform .12s ease,color .12s ease}
@@ -51,13 +52,13 @@
   .star.lit{color:var(--gold)}
   .hint{color:var(--gray);font-size:14px;font-weight:700;margin-top:14px;min-height:20px}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;border:0;border-radius:14px;
-    background:var(--red);color:#fff;font-family:"Baloo 2",sans-serif;font-size:18px;font-weight:700;
+    background:var(--red);color:#fff;font-family:"Inter",sans-serif;font-size:17px;font-weight:600;letter-spacing:.2px;
     padding:16px 18px;margin-top:6px;cursor:pointer;text-decoration:none;transition:background .15s ease,transform .1s ease;
     box-shadow:0 6px 16px rgba(231,32,39,.28)}
   .btn:active{transform:scale(.98)}
   .btn:hover{background:var(--red-dark)}
   .btn svg{width:21px;height:21px}
-  .btn.ghost{background:transparent;color:var(--gray);font-weight:700;font-size:14px;padding:12px;margin-top:10px;box-shadow:none;font-family:"Nunito",sans-serif}
+  .btn.ghost{background:transparent;color:var(--gray);font-weight:600;font-size:14px;padding:12px;margin-top:10px;box-shadow:none;font-family:"Inter",sans-serif}
   .btn.ghost:hover{background:#f6efe2}
   textarea,input{width:100%;font-family:inherit;font-size:16px;color:var(--charcoal);border:1.5px solid var(--line);
     border-radius:12px;padding:13px 14px;margin-top:12px;background:#fffdf9;transition:border-color .15s ease}
@@ -116,7 +117,7 @@
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
       <textarea name="message" id="message" placeholder="Tell us what happened — the food, the service, anything." required></textarea>
       <label class="field" for="contact">Want us to follow up? (optional)</label>
-      <input type="text" name="contact" id="contact" placeholder="Phone or email — only if you'd like a reply" />
+      <input type="email" name="contact" id="contact" inputmode="email" autocomplete="email" placeholder="Your email — only if you'd like a reply" />
       <button class="btn" type="submit" id="submitBtn" style="margin-top:18px">
         <span id="submitLabel">Send to the owner</span>
       </button>
@@ -147,7 +148,7 @@
    (looks like https://g.page/r/XXXXXXXX/review)
    Private feedback already emails the owner via /api/send-feedback (Resend).
    ==================================================================== */
-const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=REPLACE_WITH_PLACE_ID";
+const GOOGLE_REVIEW_URL = "https://g.page/r/CangQTlfppb7EBM/review";
 /* ==================================================================== */
 
 const $ = s => document.querySelector(s);
