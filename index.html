@@ -59,7 +59,13 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+        "opens": "08:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
         "opens": "08:00",
         "closes": "20:00"
       },
@@ -253,15 +259,15 @@
             </div>
             <div class="hours-banner__day">
               <div class="hours-banner__day-name">Tue</div>
-              <div class="hours-banner__day-time">8:00am<br>8:00pm</div>
+              <div class="hours-banner__day-time">8:00am<br>3:00pm</div>
             </div>
             <div class="hours-banner__day">
               <div class="hours-banner__day-name">Wed</div>
-              <div class="hours-banner__day-time">8:00am<br>8:00pm</div>
+              <div class="hours-banner__day-time">8:00am<br>3:00pm</div>
             </div>
             <div class="hours-banner__day">
               <div class="hours-banner__day-name">Thu</div>
-              <div class="hours-banner__day-time">8:00am<br>8:00pm</div>
+              <div class="hours-banner__day-time">8:00am<br>3:00pm</div>
             </div>
             <div class="hours-banner__day">
               <div class="hours-banner__day-name">Fri</div>
@@ -615,8 +621,10 @@
       todayHoursEl.textContent = 'Closed Today';
     } else if (dayIndex === 6) { // Saturday
       todayHoursEl.textContent = '7:30am - 8:00pm';
-    } else { // Tue-Fri
+    } else if (dayIndex === 5) { // Friday
       todayHoursEl.textContent = '8:00am - 8:00pm';
+    } else { // Tue-Thu
+      todayHoursEl.textContent = '8:00am - 3:00pm';
     }
   </script>
 
